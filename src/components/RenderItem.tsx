@@ -1,5 +1,5 @@
-import RenderHtmlBlock from "./RenderHtmlBlock";
-import { ItemType } from "../types/item";
+import RenderHtmlBlock from './RenderHtmlBlock';
+import { ItemType } from '../types/item';
 
 function RenderItem({ id, company, urls, descr, title, skills }: ItemType) {
   const { name, logo, website } = company;
@@ -9,15 +9,16 @@ function RenderItem({ id, company, urls, descr, title, skills }: ItemType) {
         <img src={logo} alt={title} className="max-h-6 mr-2" />
         <div>
           <h2 className='mr-2'>{title}</h2>
-          <a href={urls.ad} className='text-sm text-slate-400'>{name}</a>
+          <a href={website} className='text-md text-slate-400'>{name}</a>
         </div>
       </div>
       <div className="mx-8">
         <RenderHtmlBlock title='Description' text={ descr } />
         <RenderHtmlBlock title='Skills' text={ skills } />
         <div className='mt-4'>
-          <span className='text-sm mr-1'>Visit the ad:</span>
-          <a href={urls.ad} className='text-sm text-slate-400 hover:text-slate-600'>{website}</a>
+          <a href={urls.ad} className='text-md text-slate-400 hover:text-slate-800'>
+            Read more
+          </a>
         </div>
       </div>
     </div>

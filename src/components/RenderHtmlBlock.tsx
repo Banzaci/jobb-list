@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowCircleUp, faArrowCircleDown } from '@fortawesome/free-solid-svg-icons'
+import { faArrowCircleUp, faArrowCircleDown } from '@fortawesome/free-solid-svg-icons';
 
 type RenderHtmlBlockProps = {
   title: string;

@@ -1,9 +1,6 @@
 export type CompanyType = {
-  id: string;
   name: string;
-  title: string;
   website: string;
-  desc: string;
   logo: string;
 }
 

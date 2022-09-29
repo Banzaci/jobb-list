@@ -6,6 +6,7 @@ import { getItems } from '../util/items';
 function Index() {
   const loaderData = useLoaderData() as ItemType[];
   const renderedItems = loaderData.map(RenderItem);
+  console.log(loaderData[0])
   return (
     <div>
       { renderedItems }
