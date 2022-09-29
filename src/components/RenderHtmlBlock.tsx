@@ -13,7 +13,7 @@ function RenderHtmlBlock({ title, text }: RenderHtmlBlockProps) {
   const arrowIcon = isOpen ? faArrowCircleUp : faArrowCircleDown;
   return (
     <div className="mb-2">
-      <div onClick={onToggle} className="cursor-pointer">
+      <div onClick={onToggle} className="cursor-pointer hover:underline hover:text-cyan-600">
         <FontAwesomeIcon icon={arrowIcon} className="mr-2" />
         <span>{title}</span>
       </div>

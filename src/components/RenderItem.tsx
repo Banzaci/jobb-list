@@ -9,15 +9,15 @@ function RenderItem({ id, company, urls, descr, title, skills }: ItemType) {
         <img src={logo} alt={title} className="max-h-6 mr-2" />
         <div>
           <h2 className='mr-2'>{title}</h2>
-          <a href={website} className='text-md text-slate-400'>{name}</a>
+          <a href={website} className='text-md text-slate-400 hover:text-green-600'>{name}</a>
         </div>
       </div>
       <div className="mx-8">
-        <RenderHtmlBlock title='Description' text={ descr } />
-        <RenderHtmlBlock title='Skills' text={ skills } />
+        <RenderHtmlBlock title='Jobb description' text={ descr } />
+        <RenderHtmlBlock title='Who you are' text={ skills } />
         <div className='mt-4'>
-          <a href={urls.ad} className='text-md text-slate-400 hover:text-slate-800'>
-            Read more
+          <a href={urls.ad} className='text-md text-slate-400 hover:text-green-600'>
+            Apply here
           </a>
         </div>
       </div>
