@@ -26,3 +26,29 @@ Also, the two external links have the same styling where as the two internal lin
 ## JS
 
 I decided to split the code into resusable components, since this could be a project which could grow to a much larger web application in the future. I also added an Error component, just in case the url is not working. There is also a navigation which contain a header with a title.
+
+## If need to use cache, I would recommend React-cache
+
+function App() {
+  const queryClient = new QueryClient()
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path='/' element={<RootLayout />} errorElement={<Error />}>
+        <Route index element={<Index />} />
+      </Route>
+    )
+  );
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
+  );
+}
+
+export default App;
+
+Index: 
+const { data, status } = useQuery('items', getItems);
+
+if (status === 'loading') return <div>Loading</div>
+if (status === 'error') return <div>Something went wrong</div>
